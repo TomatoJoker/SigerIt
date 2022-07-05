@@ -1,0 +1,195 @@
+.header {
+  &__fixed {
+    position: fixed;
+  }
+  padding-top: 5.2%;
+  width: 100%;
+  z-index: 2;
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  height: 100%;
+  //  top: 0px;
+  //  left: 0px;
+  //  width: 100%;
+  //  z-index: 1;
+  //}
+  @include anim;
+  @include r(1200) {
+    padding-top: 80px;
+  }
+  .row {
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  .logo {
+    cursor: pointer;
+    max-width: 250px;
+    @include anim;
+    @include r(1200) {
+      max-width: 150px;
+    }
+  }
+  &.active {
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    //padding-bottom: 0.5%;
+    &:before {
+      background: rgba($dark, 0.8);
+    }
+    .logo {
+      max-width: 200px;
+    }
+  }
+  .dropdown {
+    padding-top: 6px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    @include gap(column, 90px);
+    @include r(1200) {
+      @include gap(column, 20px);
+    }
+    @include r(1000) {
+      @include gap(column, 10px);
+    }
+  }
+  &__item {
+    position: relative;
+    &.active {
+      & > .menu__link {
+        color: $primary;
+        cursor: auto;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+   @include hover(0.3s, all) {
+      & > .menu__sub {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    padding: 6px 13px;
+    color: $white;
+    font-weight: bold;
+    transition: inherit;
+    display: block;
+    @include r(1200) {
+      font-size: 14px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      left: 0px;
+      width: 0px;
+      height: 1px;
+      background: $primary;
+      transition: inherit;
+    }
+    @include hover(0.3s, all) {
+      color: $primary;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  &__sub {
+    position: absolute;
+    bottom: 0px;
+    transform: translate(-50%, 100%);
+    min-width: 130px;
+    left: 50%;
+    text-align: center;
+    background: rgba($black, 0.8);
+    border-radius: 5px;
+    padding: 4px 10px 8px;
+    opacity: 0;
+    visibility: hidden;
+    @include anim;
+  }
+}
+
+.dropdown {
+  min-width: 70px;
+  position: relative;
+  &__inner {
+    position: absolute;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+    &.active {
+      &:before {
+        box-shadow: 0px 0px 50px 3px rgba(163, 163, 163, 0.3);
+        transition: 0.6s;
+      }
+      .dropdown {
+        &__parent {
+          background: $black;
+          .icon {
+            transform: scale(1, -1);
+          }
+        }
+        &__list {
+          background: $black;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__item {
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+    line-height: 100%;
+    padding: 3px 9px 3px 13px;
+    color: $white;
+    a {
+      color: inherit;
+    }
+  }
+  &__parent {
+    border-radius: 5px;
+    border: 1px solid $white;
+    display: flex;
+    padding: 2px 8px 2px 12px;
+    @include gap(column, 8px);
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    @include anim;
+    .icon {
+      font-size: 13px;
+      @include size(9px, 6px);
+      fill: $primary;
+      @include anim;
+    }
+  }
+  &__list {
+    padding-top: 4px;
+    padding-bottom: 7px;
+    opacity: 0;
+    border-radius: 0px 0px 5px 5px;
+    @include anim;
+    visibility: hidden;
+    z-index: 2;
+    position: relative;
+  }
+}

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon.svg"/>
+  <link rel="stylesheet" type="text/css" href="./css/lib.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <svg class="hidden" width="0" height="0">
+    <symbol viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg" id="arrow">
+        <path d="M5.1882 5.46751C4.79295 5.89034 4.12238 5.89034 3.72713 5.46751L0.27487 1.77432C-0.322474 1.13529 0.130656 0.091445 1.0054 0.091445H7.90993C8.78468 0.091445 9.23781 1.13529 8.64047 1.77432L5.1882 5.46751Z" fill="inherit"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 26" id="mail">
+        <path d="M32.4863 2.02605C32.4855 1.99371 32.4839 1.96147 32.4814 1.92932C32.4793 1.90174 32.4766 1.87436 32.4732 1.84718C32.4658 1.7886 32.4556 1.7304 32.4427 1.67277C32.4297 1.61598 32.414 1.55982 32.3957 1.50447C32.3866 1.47694 32.3764 1.44986 32.3659 1.42263C32.3452 1.36831 32.3215 1.3152 32.2948 1.26355C32.2816 1.23766 32.268 1.21191 32.2537 1.18676C32.2394 1.16175 32.2244 1.13709 32.2088 1.1128C32.1607 1.03677 32.1067 0.96462 32.0473 0.897031C32.0375 0.885721 32.0292 0.873965 32.0191 0.862953C32.0107 0.853727 32.0012 0.84584 31.9926 0.836763C31.9709 0.814144 31.9484 0.79212 31.9256 0.770691C31.9046 0.7509 31.8836 0.731406 31.8619 0.712805C31.8403 0.694565 31.8183 0.676852 31.7959 0.65968C31.7717 0.640689 31.7471 0.622329 31.722 0.60462C31.7002 0.589292 31.6775 0.575156 31.6551 0.56087C31.6288 0.543934 31.6021 0.527708 31.575 0.512209C31.5512 0.498817 31.5267 0.486911 31.5022 0.47456C31.4755 0.461167 31.4487 0.447626 31.4213 0.435573C31.3945 0.423817 31.3673 0.413549 31.3399 0.402983C31.3136 0.393013 31.2875 0.382894 31.261 0.374114C31.232 0.36459 31.2025 0.356704 31.1732 0.348668C31.1464 0.341376 31.1203 0.334084 31.0935 0.328132C31.0641 0.321846 31.0346 0.316289 31.0049 0.311466C30.9764 0.306345 30.9478 0.301929 30.9191 0.298221C30.8911 0.295027 30.8631 0.292496 30.835 0.290632C30.8032 0.28814 30.7714 0.286503 30.7396 0.285721C30.7272 0.285573 30.7152 0.283936 30.7028 0.283936H2.13142C2.11892 0.283936 2.10701 0.285424 2.09466 0.285721C2.06267 0.286465 2.03082 0.288251 1.99898 0.290632C1.97105 0.292516 1.94316 0.295047 1.91535 0.298221C1.88633 0.301793 1.85761 0.306555 1.82874 0.311614C1.79942 0.316525 1.76996 0.321585 1.74094 0.327983C1.71401 0.334085 1.68722 0.341376 1.66029 0.348817C1.63127 0.356852 1.60225 0.36459 1.57383 0.373965C1.5466 0.382894 1.51996 0.393311 1.49317 0.40343C1.46639 0.413846 1.4396 0.423816 1.41341 0.435275C1.38558 0.447626 1.35835 0.461317 1.33097 0.475007C1.30701 0.487061 1.28291 0.498817 1.25954 0.511912C1.23216 0.527388 1.20538 0.544203 1.17859 0.561316C1.15627 0.575304 1.13395 0.589293 1.11237 0.604471C1.08707 0.621882 1.06267 0.640781 1.03811 0.659829C1.01579 0.67709 0.993769 0.694352 0.972489 0.712656C0.950684 0.73147 0.929348 0.750821 0.908501 0.770691C0.885733 0.792269 0.863263 0.814144 0.841685 0.836763C0.833054 0.845692 0.82353 0.853727 0.815048 0.862953C0.805078 0.873965 0.796745 0.885721 0.786923 0.896882C0.747643 0.941914 0.710595 0.988846 0.675911 1.03751C0.658352 1.06221 0.641685 1.08736 0.625316 1.1128C0.60984 1.13721 0.59481 1.16176 0.580524 1.18676C0.56609 1.21191 0.552697 1.23766 0.539602 1.26355C0.526209 1.28974 0.513412 1.31593 0.501507 1.34242C0.489813 1.36887 0.478798 1.39561 0.468471 1.42263C0.457906 1.44971 0.447638 1.47694 0.438411 1.50447C0.429334 1.532 0.42115 1.55983 0.413263 1.5878C0.405376 1.61608 0.397935 1.64435 0.391537 1.67263C0.378634 1.7303 0.368454 1.78855 0.361031 1.84718C0.357658 1.87436 0.354929 1.90169 0.352846 1.92917C0.350267 1.96142 0.34863 1.99366 0.347935 2.0259C0.347638 2.04078 0.345703 2.05492 0.345703 2.06965V22.3077C0.346609 23.0968 0.660462 23.8533 1.21841 24.4112C1.77636 24.9692 2.53284 25.283 3.32189 25.2839H29.5124C30.3014 25.283 31.0579 24.9692 31.6159 24.4112C32.1738 23.8533 32.4877 23.0968 32.4886 22.3077V2.06965C32.4886 2.05477 32.4866 2.04063 32.4863 2.02605ZM26.1122 3.85536L16.4171 12.7424L6.72219 3.85536H26.1122ZM3.91713 21.7125V6.12888L15.2106 16.4813C15.5399 16.7831 15.9704 16.9506 16.4171 16.9506C16.8639 16.9506 17.2944 16.7831 17.6237 16.4813L28.9171 6.12888V21.7125H3.91713Z" fill="inherit"/>
+    </symbol>
+    <symbol viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" id="phone">
+        <path d="M23.61 16.5382L18.0175 14.1414C17.6525 13.9842 17.254 13.921 16.8583 13.9573C16.4626 13.9937 16.0823 14.1285 15.7521 14.3496L12.9942 16.1886C11.4531 15.3783 10.1918 14.1225 9.37476 12.585L11.2094 9.78148C11.4256 9.45215 11.5567 9.07438 11.5911 8.68196C11.6255 8.28955 11.562 7.89473 11.4065 7.53283L9.0076 1.93563C8.80289 1.46081 8.45003 1.06497 8.00176 0.807259C7.55348 0.549549 7.03386 0.443803 6.52052 0.505821C4.79197 0.728021 3.20343 1.57189 2.05164 2.8798C0.899855 4.1877 0.263595 5.87018 0.261719 7.61295C0.261719 17.3568 8.189 25.2841 17.9328 25.2841C19.6756 25.2822 21.3581 24.6459 22.666 23.4941C23.9739 22.3423 24.8178 20.7538 25.04 19.0253C25.1022 18.5119 24.9965 17.9922 24.7388 17.5438C24.481 17.0955 24.085 16.7427 23.61 16.5382ZM17.9328 22.4185C14.0075 22.414 10.2442 20.8528 7.46863 18.0772C4.69301 15.3015 3.13173 11.5383 3.1273 7.61295C3.12817 6.63007 3.46537 5.67708 4.08286 4.91239C4.70035 4.14769 5.56094 3.61735 6.52159 3.40949L8.67173 8.4263L6.82558 11.2473C6.60014 11.5919 6.4676 11.989 6.44082 12.3999C6.41404 12.8108 6.49394 13.2217 6.67275 13.5926C7.80665 15.9056 9.68209 17.7726 12.0002 18.896C12.3734 19.074 12.7864 19.152 13.1988 19.1223C13.6112 19.0927 14.0089 18.9564 14.3528 18.7269L17.1266 16.8773L22.1363 19.0242C21.9284 19.9848 21.398 20.8454 20.6333 21.4629C19.8687 22.0803 18.9157 22.4176 17.9328 22.4185Z" fill="inherit"/>
+    </symbol>
+    <symbol viewBox="0 0 25 46" xmlns="http://www.w3.org/2000/svg" id="mouse">
+        <path d="M12.4805 0C8.42571 0 5.12695 3.29876 5.12695 7.35359V17.6464C5.12695 21.7012 8.42571 25 12.4805 25C16.5354 25 19.8341 21.7012 19.8341 17.6464V7.35359C19.8341 3.29876 16.5354 0 12.4805 0ZM18.3342 17.6464C18.3342 20.874 15.7082 23.5001 12.4805 23.5001C9.25293 23.5001 6.62689 20.874 6.62689 17.6464V7.35359C6.62689 4.12598 9.25293 1.49994 12.4805 1.49994C15.7082 1.49994 18.3342 4.12598 18.3342 7.35359V17.6464Z" fill="inherit"/>
+        <path d="M12.4807 4.97327C12.0664 4.97327 11.7307 5.30896 11.7307 5.72324V9.17516C11.7307 9.58924 12.0664 9.92513 12.4807 9.92513C12.8948 9.92513 13.2307 9.58924 13.2307 9.17516V5.72324C13.2307 5.30896 12.895 4.97327 12.4807 4.97327Z" fill="inherit"/>
+        <path d="M12.9116 45.7908L19.838 37.2192C20.0594 36.9354 20.0531 36.4832 19.8238 36.2092C19.6001 35.9418 19.2455 35.9418 19.0218 36.2092L12.5035 44.2758L5.98516 36.2092C5.75978 35.9303 5.39439 35.9303 5.16901 36.2092C4.94366 36.4881 4.94366 36.9403 5.16901 37.2192L12.0954 45.7908C12.3208 46.0697 12.6862 46.0697 12.9116 45.7908Z" fill="inherit"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 50 51" id="logo">
+        <path d="M37.8325 0H13.8325C6.43252 0 0.33252 6.1 0.33252 13.5V37.5C0.33252 45 6.43252 51 13.8325 51H37.8325C45.3325 51 51.3325 45 51.3325 37.5V13.5C51.3325 6.1 45.3325 0 37.8325 0ZM14.6325 14.3V16.8H35.8325C40.6325 16.8 44.5325 20.7 44.5325 25.5V28.5C42.4325 25.9 39.2325 24.3 35.8325 24.3H15.8325C11.0325 24.3 7.13252 20.4 7.13252 15.6C7.13252 10.8 11.0325 6.9 15.8325 6.9H35.7325C40.5325 6.9 44.4325 10.8 44.4325 15.6V18.6C42.3325 16 39.1325 14.4 35.7325 14.4H14.6325V14.3ZM35.8325 44.2H15.8325C11.0325 44.2 7.13252 40.3 7.13252 35.5V32.5C9.23252 35.1 12.4325 36.7 15.8325 36.7H36.9325V34.2H15.8325C11.0325 34.2 7.13252 30.3 7.13252 25.5V22.5C9.23252 25.1 12.4325 26.7 15.8325 26.7H35.7325C40.5325 26.7 44.4325 30.6 44.4325 35.4C44.4325 40.2 40.6325 44.2 35.8325 44.2Z" fill="inherit"/>
+    </symbol>
+</svg>
+</head>
+<body>
+<noscript>
+  <div class="noscript">
+  </div>
+</noscript>
+<!--if lte IE 8
+p.off-js
+  | Ваш браузер устарел, пожалуйста
+  b обновите
+  |  его.
+-->
+
+    <div class="wrapper">
+        <div class="header header__fixed ">
+    <div class="container">
+        <div class="row">
+            
+            <div class="logo js__main-link disable">
+            
+                <a data-menuanchor="main" href="/#main" class="js__menu">
+                    <img src="./images/logo.svg" alt="">
+                </a>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item" data-menuanchor="about">
+                        <a href="/#about" class="menu__link js__menu">About us</a>
+                        <ul class="menu__sub">
+                            <li class="menu__item" data-menuanchor="service">
+                                <a href="/#about/service" class="menu__link js__menu">Service</a>
+                            </li>
+                            <li class="menu__item" data-menuanchor="review">
+                                <a href="/#about/review" class="menu__link js__menu">Review</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item" data-menuanchor="portfolio"><a href="/#portfolio" class="menu__link js__menu">Portfolio</a></li>
+                    <li class="menu__item" data-menuanchor="contacts"><a href="/#contacts" class="menu__link js__menu">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <div class="dropdown__inner">
+                    <div class="dropdown__item dropdown__parent js__dropdown">
+                        eng
+                        <svg class="icon">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </div>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item">
+                            <a href="#" >укр</a>
+                        </li>
+                        <li class="dropdown__item">
+                            <a href="#">рус</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <main class="main js__page-scroll">
+            <section data-anchor="main" class="main-page js__section">
+                <div class="container">
+                    <div class="main-page__inner inner js__background-size">
+                        <div class="main-page__right">
+                            <h1 class="h1-title">Seiger IT – digital solutions for your business tasks</h1>
+                            <div class="main-page__description">
+                                <p>We carry out the development of both small business card sites and complex projects
+                                    that require large computing power. You can get acquainted with our works in more
+                                    detail in the section Our works</p>
+                            </div>
+                            <div>
+                                <a href="/portfolio.html" class="btn">
+                                    Our project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message">
+                    <svg class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <p>We support Ukraine and don't accept military aggression against other country's. <br>
+                        <span>'Русский корабль иди нахуй.'<span></p>
+                </div>
+            </section>
+            <section data-anchor="about" class="js__section">
+                <section class="our-results js__slide">
+                    <div class="container">
+                        <div class="inner">
+                            <div class="our-results__left">
+                                <h2 class="h1-title">Our results for today</h2>
+                                <div class="our-results__statistic">
+                                    <div class="row">
+                                        <div class="our-results__number gradient js__counter">58</div>
+                                        <span>Completed projects</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="our-results__number gradient js__counter">55</div>
+                                        <span>Satisfied customers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section data-anchor="service" class="structure background js__slide">
+                    <div class="container">
+                        <div class="row">
+                            <div class="structure__left dark-block">
+                                <h2 class="h2-title">Seiger IT is</h2>
+                                <div class="structure__description structure__description_big">
+                                    <p>A team of like-minded people who came together to achieve a common aims - the
+                                        creation of an original product. We do not impose on the customer standard
+                                        solutions, and we implement all the wishes of the client. Customer oriented
+                                        service is our approach to work. A graceful fusion of strategic management and
+                                        creative ideas.</p>
+                                    <p>The full cycle of product development is provided by our own employees at all
+                                        stages of product creation. The client is always right ... Is right that he
+                                        turned to us, and we will advise how to do it better. We will organize your
+                                        ideas into our overall result. Creatively. Functionally. Comfortable. Quickly.
+                                        Reasonably priced.</p>
+                                </div>
+                            </div>
+                            <div class="structure__services dark-block">
+                                <h2 class="h2-title">Our services</h2>
+                                <div class="structure__row">
+                                    <img src="./images/front-end.png" width="234" height="153" alt="" class="structure__img">
+                                    <div class="structure__service">
+                                        <h3 class="h3-title">Front-end</h3>
+                                        <p>The client side of the user interface to the software and hardware part of
+                                            the service</p>
+                                    </div>
+                                </div>
+                                <div class="structure__row structure__row_end">
+                                    <img src="./images/back-end.png" width="234" height="153" alt="" class="structure__img">
+                                    <div class="structure__service">
+                                        <h3 class="h3-title">Back-end</h3>
+                                        <p>The client side of the user interface to the software and hardware part of
+                                            the service</p>
+                                    </div>
+                                </div>
+                                <div class="structure__row">
+                                    <img src="./images/web-design.png" width="234" height="153" alt="" class="structure__img">
+                                    <div class="structure__service">
+                                        <h3 class="h3-title">Web design</h3>
+                                        <p>A type of design, the task of which is to design web user interfaces for
+                                            sites or web applications.</p>
+                                    </div>
+                                </div>
+                                <div class="structure__row structure__row_end">
+                                    <img src="./images/support.png" width="234" height="153" alt="" class="structure__img">
+                                    <div class="structure__service">
+                                        <h3 class="h3-title">Site support</h3>
+                                        <p>This is a set of measures related to ensuring the stable operation of a
+                                            certain web resource.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section data-anchor="review" class="review background js__slide js__lenght">
+                    <div class="container">
+                        <div class="review__inner inner">
+                            <div class="review__slider dark-block">
+                                <div class="swiper js__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="review__item swiper-slide">
+                                            <div class="review__head">
+                                                <img src="./images/man.jpg" width="84" height="84" alt="">
+                                                <div class="review__pro">
+                                                    <div class="semibold">Prosper Powell</div>
+                                                    <p>User</p>
+                                                </div>
+                                            </div>
+                                            <div class="review__bottom">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                                    aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                                    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                                                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                                    nulla ut metus varius laoreet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__item swiper-slide">
+                                            <div class="review__head">
+                                                <img src="./images/man.jpg" width="84" height="84" alt="">
+                                                <div class="review__pro">
+                                                    <div class="semibold">Prosper Powell</div>
+                                                    <p>User</p>
+                                                </div>
+                                            </div>
+                                            <div class="review__bottom">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                                    aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                                    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                                                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                                    nulla ut metus varius laoreet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__item swiper-slide">
+                                            <div class="review__head">
+                                                <img src="./images/man.jpg" width="84" height="84" alt="">
+                                                <div class="review__pro">
+                                                    <div class="semibold">Prosper Powell</div>
+                                                    <p>User</p>
+                                                </div>
+                                            </div>
+                                            <div class="review__bottom">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                                    aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                                    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                                                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                                    nulla ut metus varius laoreet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__item swiper-slide">
+                                            <div class="review__head">
+                                                <img src="./images/man.jpg" width="84" height="84" alt="">
+                                                <div class="review__pro">
+                                                    <div class="semibold">Prosper Powell</div>
+                                                    <p>User</p>
+                                                </div>
+                                            </div>
+                                            <div class="review__bottom">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                                    aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                                    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                                                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                                    nulla ut metus varius laoreet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__item swiper-slide">
+                                            <div class="review__head">
+                                                <img src="./images/man.jpg" width="84" height="84" alt="">
+                                                <div class="review__pro">
+                                                    <div class="semibold">Prosper Powell</div>
+                                                    <p>User</p>
+                                                </div>
+                                            </div>
+                                            <div class="review__bottom">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                                    aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                                    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                                                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                                    nulla ut metus varius laoreet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__item swiper-slide">
+                                            <div class="review__head">
+                                                <img src="./images/man.jpg" width="84" height="84" alt="">
+                                                <div class="review__pro">
+                                                    <div class="semibold">Prosper Powell</div>
+                                                    <p>User</p>
+                                                </div>
+                                            </div>
+                                            <div class="review__bottom">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                                    aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                                    mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+                                                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                                    nulla ut metus varius laoreet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="js__arrow-prev arrow arrow__left">
+                    <svg class="icon">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </div>
+                <div class="js__arrow-next arrow arrow__right">
+                    <svg class="icon">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </div>
+            </section>
+            <section data-anchor="portfolio" class="portfolio js__section">
+                <div class="container">
+                    <div class="inner">
+                        <div class="carousel swiper js__carousel">
+                            <div class="carousel__wrapper swiper-wrapper">
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" idth="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                                <div class="carousel__item swiper-slide">
+                                    <img src="/images/ppri.jpg" width="556" height="295" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-anchor="contacts" class="contact js__section last">
+                <div class="container">
+                    <div class="contact__inner inner">
+                        <form class="dark-block form">
+                            <h2 class="h2-title">Leave a request</h2>
+                            <p class="form__sub-title">We will contact you shortly</p>
+                            <div class="form__center js__scroll-container">
+                                <div class="js__height">
+                                    <div class="form__input">
+                                        <input type="text" id="name" name="form[name]" placeholder="Your name" require="">
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" id="name" name="form[name]" placeholder="Your name" require="">
+                                        <div class="error">Error</div>
+                                    </div>
+                                    <input type="email" id="email" class="form__input" name="form[email]" placeholder="Your e-mail" require="">
+                                    <div class="form__input form__text js__textarea">
+                                        <textarea placeholder="Write us!"></textarea>
+                                        <div class="error">Please, describe your task</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn">Send a request</button>
+                            <p class="form__attention">By clicking on the button you consent to the processing of your <a href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" target="_blank" rel="noopener">personal data</a></p>
+                        </form>
+                    </div>
+                    <svg class="js__icon icon icon__mouse">
+                        <use xlink:href="#mouse"></use>
+                    </svg>
+                </div>
+            </section>
+        </main>
+        <footer class="footer footer__main ">
+    <div class="container">
+        <div class="row">
+            <div class="logo js__main-link">
+                <a data-menuanchor="main" href="/#main">
+                    <img src="./images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="footer__right">
+                <a class="footer__item" href="mailto:info@seigerit.com">
+                    <svg class="icon">
+                        <use xlink:href="#mail"></use>
+                    </svg>
+                    info@seigerit.com
+                </a>
+                <a class="footer__item" href="tel:+380 50 123 4567">
+                    <svg class="icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                    +380 50 123 4567
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="cookies js__cookies">
+    <div class="container">
+        <div class="cookies__wrapper">
+            <p>By continuing to use this site, you are agreeing to the use of cookies.</p>
+            <a href="#" class="btn">Privacy Policy</a>
+            <button class="btn js__btn-cookies">Accept</button>
+        </div>
+    </div>
+</div>
+        <div class="modal dark-block" id="modal-card">
+    <img src="/images/ppri.jpg" width="491" height="295" alt="">
+    <h3 class="h3-title">PPRI - Paranormal Phenomena Research & Investigation</h3>
+    <div class="modal__text">
+        <p>The Canadian Association of Parapsychological Research & Investigation operating as Paranormal Phenomena
+            Research & Investigation (PPRI) is a non-profit organization consisting of subject matter experts in the
+            social science discipline of parapsychology serving both Atlantic Canada and the New England area of the
+            United States. PPRI is dedicated to serving the public by conducting ethical and scientific
+            parapsychological investigations, contributing research to the scientific community, and disseminating fact
+            based educational information.</p>
+    </div>
+    <a href="#" target="_blank" rel="nofollow" class="btn">Go to</a>
+</div>
+
+
+    </div>
+
+
+<script src="js/lib.min.js"></script>
+<script src="js/main.js"></script>
+<!-- navigation js -->
+<script src="js/navigation.js"></script>
+</body>
+</html>

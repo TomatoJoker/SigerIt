@@ -1,0 +1,127 @@
+.project {
+  padding: 70px 0px;
+  @include r(1200) {
+    padding: 45px 0px 70px;
+  }
+  @include r(1000) {
+    max-width: 558px;
+    margin: auto;
+    padding: 70px 0px 60px;
+  }
+  @include r(767) {
+    max-width: 446px;
+    padding: 21px 0px 45px;
+  }
+  @include r(576) {
+    max-width: 100%;
+    padding: 7px 0px 32px;
+  }
+  h1 {
+    margin-bottom: 32px;
+    @include r(576) {
+      margin-bottom: 10px;
+    }
+  }
+  .grid {
+    @include gap(column, 18px);
+    @include gap(row, 32px);
+    //grid-auto-rows: 1fr;
+    @include r(1200) {
+      grid-template-columns: repeat(2, 1fr);
+      @include gap(column, 42px);
+      @include gap(row, 30px);
+    }
+    @include r(1000) {
+      grid-template-columns: repeat(1, 1fr);
+      @include gap(row, 27px);
+    }
+    @include r(767) {
+      @include gap(row, 21px);
+    }
+    @include r(576) {
+      @include gap(row, 16px);
+    }
+  }
+  &__card {
+    position: relative;
+    border-radius: 23px;
+    overflow: hidden;
+    cursor: pointer;
+    @include hover(0.3s, opacity) {
+      .project__inner {
+        opacity: 1;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__img {
+    padding-bottom: 56.3%;
+    @include r(1200) {
+      position: relative;
+    }
+  }
+  &__inner {
+    transition: inherit;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 8.4% 5.5% 4.6% 7.4%;
+    background: rgba(16, 16, 37, 0.8);
+    @include r(1200) {
+      margin-top: -2px;
+      position: static;
+      opacity: 1;
+      background: $black;
+      height: auto;
+      bottom: 0px;
+      padding: 10px 10px 20px 20px;
+      top: auto;
+      p {
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 1.107;
+        display: inline;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    max-height: 97px;
+    overflow: hidden;
+    @include r(1200) {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      @include gap(column, 10px);
+      &:after {
+        content: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.05606 0.560059C4.86938 0.560059 3.70934 0.911952 2.72264 1.57124C1.73595 2.23053 0.966912 3.1676 0.512786 4.26396C0.0586605 5.36031 -0.0601595 6.56671 0.171352 7.7306C0.402863 8.89449 0.974308 9.96358 1.81342 10.8027C2.65254 11.6418 3.72164 12.2133 4.88552 12.4448C6.04941 12.6763 7.25581 12.5575 8.35216 12.1033C9.44852 11.6492 10.3856 10.8802 11.0449 9.89348C11.7042 8.90678 12.0561 7.74675 12.0561 6.56006C12.0561 5.77213 11.9009 4.99191 11.5993 4.26396C11.2978 3.536 10.8559 2.87457 10.2987 2.31742C9.74155 1.76027 9.08012 1.31831 8.35216 1.01678C7.62421 0.715253 6.84399 0.560059 6.05606 0.560059ZM6.05606 11.3601C5.10671 11.3601 4.17868 11.0785 3.38933 10.5511C2.59997 10.0237 1.98474 9.27402 1.62144 8.39694C1.25814 7.51985 1.16309 6.55473 1.34829 5.62362C1.5335 4.69252 1.99066 3.83724 2.66195 3.16595C3.33324 2.49465 4.18852 2.0375 5.11963 1.85229C6.05074 1.66708 7.01586 1.76214 7.89294 2.12544C8.77003 2.48874 9.51968 3.10397 10.0471 3.89332C10.5745 4.68268 10.8561 5.61071 10.8561 6.56006C10.8561 7.8331 10.3503 9.054 9.45018 9.95417C8.55 10.8543 7.3291 11.3601 6.05606 11.3601Z' fill='%23CEC3BD'/%3E%3Cpath d='M6.05609 4.76006C6.38746 4.76006 6.65608 4.49143 6.65608 4.16006C6.65608 3.82869 6.38746 3.56006 6.05609 3.56006C5.72471 3.56006 5.45609 3.82869 5.45609 4.16006C5.45609 4.49143 5.72471 4.76006 6.05609 4.76006Z' fill='%23CEC3BD'/%3E%3Cpath d='M6.05609 5.36011C5.89696 5.36011 5.74434 5.42332 5.63182 5.53584C5.5193 5.64837 5.45609 5.80098 5.45609 5.96011V8.96011C5.45609 9.11924 5.5193 9.27185 5.63182 9.38437C5.74434 9.49689 5.89696 9.56011 6.05609 9.56011C6.21521 9.56011 6.36783 9.49689 6.48035 9.38437C6.59287 9.27185 6.65608 9.11924 6.65608 8.96011V5.96011C6.65608 5.80098 6.59287 5.64837 6.48035 5.53584C6.36783 5.42332 6.21521 5.36011 6.05609 5.36011Z' fill='%23CEC3BD'/%3E%3C/svg%3E");
+      }
+    }
+    p {
+      @include r(576) {
+        font-size: 9px;
+        font-weight: 700;
+      }
+      &:not(:last-child) {
+        padding: 5px;
+      }
+    }
+  }
+}

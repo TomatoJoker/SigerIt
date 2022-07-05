@@ -1,0 +1,56 @@
+.footer {
+  position: relative;
+  &__main {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+  }
+  background: $black;
+  padding: 10px 0px;
+
+  .logo {
+    max-width: 175px;
+    @include r(1200) {
+      max-width: 150px;
+    }
+  }
+  &__right {
+    display: flex;
+    @include gap(column, 70px);
+    @include r(1200) {
+      @include gap(column, 50px);
+    }
+    @include r(1000) {
+      @include gap(column, 30px);
+    }
+  }
+  &__item {
+    color: $white;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    @include gap(column, 19px);
+    @include hover(0.3s, all) {
+      color: $primary;
+      .icon {
+        fill: $primary;
+      }
+    }
+    @include r(1200) {
+      font-size: 14px;
+    }
+    @include r(1000) {
+      @include gap(column, 15px);
+    }
+    .icon {
+      fill: white;
+      transition: inherit;
+      @include size(32px, 25px);
+      font-size: 32px;
+      @include r(1200) {
+        font-size: 25px;
+        @include size(25px, 20px);
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.error-404 {
+  &__left {
+    max-width: 684px;
+    .h1-title {
+      margin-bottom: 25px;
+    }
+  }
+  &__text {
+    margin-bottom: 40px;
+  }
+  &__right {
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+  }
+  &__inner {
+    position: relative;
+    background-image: url("../images/404.png");
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto 91%;
+  }
+}
