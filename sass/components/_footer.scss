@@ -6,7 +6,7 @@
     position: absolute;
     width: 100%;
     bottom: 0px;
-    @include r(576) {
+    @include r(767) {
       position: relative;
     }
   }

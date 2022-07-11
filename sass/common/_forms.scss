@@ -61,6 +61,12 @@
       @include r(1200) {
         margin-bottom: 40px;
       }
+      @include r(1000) {
+        margin-bottom: 35px;
+      }
+      @include r(576) {
+        margin-bottom: 30px;
+      }
     }
     .error {
       position: absolute;
@@ -109,6 +115,14 @@
       padding-top: 18px;
       padding-bottom: 18px;
       font-size: 20px;
+    }
+    @include r(576) {
+      font-size: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 8px !important;
     }
   }
   &__attention {

@@ -32,6 +32,9 @@ body {
   padding: 70px 50px 100px;
   max-width: calc(1450px + 100px);
   margin: auto;
+  @include r(1000) {
+    padding: 30px 0px 50px;
+  }
   img {
     display: block;
     margin: 0 auto 46px;
@@ -66,6 +69,9 @@ body {
 
   h1 {
     margin-bottom: 60px;
+    @include r(1000) {
+      margin-bottom: 20px;
+    }
   }
 
   h2 {
@@ -200,7 +206,10 @@ h3, .h3-title {
   flex: 1 0 auto;
   &__home {
     section {
-      min-height: 100vh;
+      min-height: calc(var(--vh, 1vh) * 100);
+      @include r(767) {
+        min-height: auto;
+      }
     }
   }
 }
@@ -209,6 +218,9 @@ section {
   min-height: calc(100vh - 150px - 55px);
   display: flex;
   flex-direction: column;
+  @include r(767) {
+    min-height: calc(100vh - 48px - 51px);
+  }
 }
 
 .section__fullpage {
@@ -238,6 +250,9 @@ section {
   z-index: 2;
   padding: 5px;
   cursor: pointer;
+  @include r(767) {
+    display: none;
+  }
   @include hover(0.3s, fill) {
     .icon {
       fill: $primary;
@@ -264,6 +279,12 @@ section {
   flex-direction: column;
   align-items: center;
   @include gap(row, 58px);
+  @include r(767) {
+    @include gap(row, 18px);
+  }
+  @include r(576) {
+    @include gap(row, 40px);
+  }
   .swiper-slide {
     height: auto;
   }
@@ -345,13 +366,6 @@ section {
   flex: 1;
 }
 
-.error-text {
-  p {
-    font-size: 24px;
-    line-height: 100.69%;
-  }
-}
-
 input:not([type="checkbox"]),
 textarea {
   padding: 22px 43px 21px;
@@ -378,6 +392,7 @@ textarea {
   }
   @include r(767) {
     font-size: 14px;
+    padding: 10px 43px;
   }
 }
 
@@ -412,16 +427,24 @@ textarea {
     @include r(1000) {
       margin-right: 0px;
     }
+    @include r(576) {
+      width: 100%;
+    }
   }
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     @include gap(column, 20px);
+    @include r(767) {
+      @include gap(row, 10px);
+      flex-wrap: wrap;
+    }
   }
   .btn {
     font-size: 18px;
     padding: 8px 15px;
+    line-height: 100%;
     //white-space: nowrap;
   }
 }
@@ -441,4 +464,18 @@ textarea {
     opacity: 1;
     visibility: visible;
   }
+}
+
+// chrome scrollbar style
+body::-webkit-scrollbar {
+  width: 4px;               /* width of the entire scrollbar */
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+  background: $dark;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: silver;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 0px solid orange;  /* creates padding around scroll thumb */
 }

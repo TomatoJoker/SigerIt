@@ -30,7 +30,7 @@ $(function () {
         responsiveWidth: false,
         menu: '.menu__list',
         controlArrows: false,
-        // scrollBar: true,
+        scrollBar: true,
         normalScrollElements: '.normal-scrolling',
         fitToSection: false,
         fixedElements: '.message',

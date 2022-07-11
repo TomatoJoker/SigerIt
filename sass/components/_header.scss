@@ -289,6 +289,9 @@
     color: $white;
     a {
       color: inherit;
+      @include hover(0.3s, all) {
+        text-shadow: 2px 1px 3px $white;
+      }
     }
   }
   &__parent {
@@ -309,6 +312,12 @@
       @include size(9px, 6px);
       fill: $primary;
       @include anim;
+    }
+    @include hover(0.3s, all) {
+      text-shadow: 2px 1px 3px $white;
+      .icon {
+        fill: rgba($primary, 0.4);
+      }
     }
   }
   &__list {

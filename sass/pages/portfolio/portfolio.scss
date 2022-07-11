@@ -103,8 +103,11 @@
     }
   }
   &__text {
-    max-height: 97px;
+    max-height: 110px;
     overflow: hidden;
+    p {
+      line-height: 120%;
+    }
     @include r(1200) {
       display: flex;
       align-items: center;

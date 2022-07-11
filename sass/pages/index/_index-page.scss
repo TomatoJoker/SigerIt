@@ -3,6 +3,11 @@
   }
 
 .main-page {
+  @include r(767) {
+    min-height: auto !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .h1-title {
     margin-bottom: 33px;
     @include r(1000) {
@@ -26,6 +31,14 @@
       background-size: auto 60% !important;
       align-items: flex-end;
     }
+    //@media (max-height: 450px) and (max-width: 1000px) {
+    @include r(767) {
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+      background-position: calc(70% + 50px) calc(50% + 30px);
+      background-size: 45% auto !important;
+    }
   }
   &__right {
     max-width: 559px;
@@ -35,15 +48,29 @@
     @include r(1000) {
       max-width: 100%;
     }
+    //@media (max-height: 450px) and (max-width: 1000px) {
+    @include r(767) {
+      max-width: 301px;
+      margin-right: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__description {
     margin-bottom: 45px;
     @include r(1000) {
       text-align: center;
     }
+    @include r(767) {
+      margin-bottom: 30px;
+    }
     p {
       @include css-lock(18, 24, 1200, 1900);
       line-height: 132%;
+      @include r(767) {
+        font-size: 12px;
+      }
       &:not(:last-child) {
         margin-bottom: 10px;
       }
@@ -59,6 +86,16 @@
       margin-bottom: 61px;
       display: block;
       line-height: 140%;
+    }
+    //@media (max-height: 450px) and (max-width: 1000px) {
+    @include r(767) {
+      font-size: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 37px;
+      padding-right: 37px;
+      width: auto;
+      display: inline-flex;
     }
   }
 }
@@ -76,6 +113,9 @@
   @include r(1000) {
     background-position: 75% 0px;
     background-size: auto 80%;
+  }
+  @include r(767) {
+    background: none;
   }
   .inner {
     display: flex;
@@ -96,6 +136,14 @@
       background: $black;
       padding: 25px 51px 50px;
     }
+    @include r(767) {
+      padding: 40px 44px 37px;
+      margin-bottom: 22px;
+    }
+    @include r(576) {
+      padding: 25px 40px;
+      margin-bottom: 16px;
+    }
   }
   h2,
   .h1-title {
@@ -105,6 +153,13 @@
     }
     @include r(1000) {
       font-size: 36px;
+    }
+    @include r(767) {
+      font-size: 30px;
+    }
+    @include r(576) {
+      font-size: 18px;
+      margin-bottom: 10px;
     }
   }
   .row {
@@ -117,21 +172,37 @@
       @include r(1200) {
         margin-bottom: 27px;
       }
+      @include r(767) {
+        margin-bottom: 8px;
+      }
     }
     span {
       @include css-lock(24, 48, 1200, 1920);
       @include font-Roboto-regular;
+      line-height: 100%;
+      @include r(576) {
+        font-size: 18px;
+      }
     }
   }
   &__number {
     @include font-Roboto-regular;
     @include css-lock(64, 96, 1200, 1920);
     line-height: 100%;
+    @include r(767) {
+      font-size: 48px;
+    }
+    @include r(576) {
+      font-size: 36px;
+    }
   }
 }
 
 .structure {
   padding-top: 20px;
+  @include r(767) {
+    padding-top: 0px;
+  }
   .container {
     height: 100%;
   }
@@ -149,6 +220,11 @@
       padding-bottom: 70px;
       flex-wrap: nowrap;
     }
+    @include r(767) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-bottom: 22px;
+    }
   }
   .h2-title {
     margin-bottom: 15px;
@@ -160,14 +236,22 @@
     flex: 1;
     @include r(1000) {
       padding: 30px 65px !important;
+      flex: 0;
+    }
+    @include r(767) {
+      margin-bottom: 22px;
+    }
+    @include r(576) {
+      padding: 25px 40px !important;
+      margin-bottom: 16px;
     }
     .h2-title {
       @include r(1200) {
         font-size: 24px;
       }
-    }
-    @include r(1000) {
-      flex: 0;
+      @include r(576) {
+        font-size: 18px;
+      }
     }
   }
   &__description {
@@ -180,6 +264,9 @@
       -webkit-line-clamp: 11;
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
+    }
+    @include r(576) {
+      max-height: none;
     }
     &_big {
       p {
@@ -203,9 +290,12 @@
     display: flex;
     align-items: center;
     @include gap(column, 6%);
-    @include r(1000) {
-      &:not(:last-child) {
+    &:not(:last-child) {
+      @include r(1000) {
         margin-bottom: 22px;
+      }
+      @include r(576) {
+        margin-bottom: 15px;
       }
     }
     p {
@@ -213,6 +303,10 @@
     }
     .h3-title {
       margin-bottom: 3px;
+      @include r(576) {
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
     &_end {
       flex-direction: row-reverse;
@@ -221,10 +315,19 @@
   &__services {
     flex: 1;
     max-width: 825px;
+    @include r(576) {
+      padding: 25px 40px !important;
+    }
     .h2-title {
       margin-left: 90px;
       margin-right: 90px;
       margin-bottom: 30px;
+      @include r(576) {
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
     }
     @include r(1000) {
       max-width: 100%;
@@ -241,6 +344,9 @@
     height: auto;
     @include r(1200) {
       width: 150px;
+    }
+    @include r(576) {
+      display: none;
     }
   }
 }
@@ -267,6 +373,12 @@
       max-width: 100%;
       padding: 68px 71px 45px 85px;
     }
+    @include r(767) {
+      padding: 50px 33px 45px;
+    }
+    @include r(576) {
+      padding: 32px 32px;
+    }
   }
   &__head {
     display: flex;
@@ -274,17 +386,33 @@
     padding-bottom: 21px;
     margin-bottom: 9px;
     border-bottom: 1px solid $primary;
-    img {
-      border-radius: 5px;
-    }
     @include r(1000) {
       padding-bottom: 35px;
       margin-bottom: 35px;
       @include gap(column, 12px);
     }
+    @include r(767) {
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+    @include r(576) {
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+    }
+    img {
+      border-radius: 5px;
+      @include size(84px);
+      object-fit: cover;
+      @include r(767) {
+        @include size(60px);
+      }
+    }
   }
   &__pro {
     margin-top: 21px;
+    @include r(576) {
+      margin-top: 11px;
+    }
     .semibold {
       font-size: 18px;
     }
@@ -294,6 +422,9 @@
     * {
       &:not(:last-child) {
         margin-bottom: 2px;
+        @include r(576) {
+          margin-bottom: 8px;
+        }
       }
     }
   }
@@ -314,8 +445,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @include r(1000) {
-    display: none;
+  @include r(767) {
+    padding-top: 0px;
+    padding-bottom: 50px;
   }
 }
 
@@ -421,6 +553,7 @@
   background-size: 64%;
   background-repeat: no-repeat;
   background-position: 2.5% 82%;
+  padding: 32px 0px;
   @include r(1200) {
     background-size: 62%;
     background-repeat: no-repeat;
@@ -431,6 +564,11 @@
   }
   &__inner {
     justify-content: flex-end;
+    @include r(767) {
+      max-width: 502px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .form.dark-block {
     box-shadow: none;
@@ -449,6 +587,9 @@
       animation-timing-function: ease;
       animation-iteration-count: infinite;
       @include anim;
+    }
+    @include r(767) {
+      display: none;
     }
     &.hide {
       opacity: 0;
@@ -473,7 +614,7 @@
 
 .message {
   padding: 10px 15px;
-  position: absolute;
+  position: fixed;
   background: rgba($dark, 0.8);
   border: 1px solid $primary;
   border-radius: 14px;
@@ -483,8 +624,15 @@
   bottom: 20px;
   left: 40px;
   max-width: 850px;
+  z-index: 99;
+  @include rmin(1201) {
+    @include anim;
+  }
   @include r(1000) {
     display: none;
+  }
+  &.hide {
+    opacity: 0;
   }
   .icon {
     fill: $primary;
@@ -501,6 +649,29 @@
       margin-top: 5px;
       display: block;
       font-weight: 700;
+    }
+  }
+}
+
+.section-about {
+  @include r(767) {
+    background-image: url("../images/background-mobile.jpg");
+    background-size: cover calc(100% + 5px);
+    background-position: center;
+    padding-bottom: 82px;
+    padding-top: 94px;
+  }
+  @include r(576) {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  section {
+    @include r(767) {
+      background-image: none;
+      max-width: 502px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
     }
   }
 }

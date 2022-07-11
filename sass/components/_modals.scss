@@ -5,8 +5,16 @@ body {
     margin: 0 auto;
     padding: 40px 50px 40px 50px;
     box-shadow: none;
+    @include r(576) {
+      padding: 33px 25px;
+    }
     img {
       margin-bottom: 10px;
+      @include r(767) {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
     }
     .h3-title {
       font-weight: 400;
@@ -14,6 +22,12 @@ body {
     }
     &__text {
       margin-bottom: 30px;
+      p {
+        line-height: 120%;
+      }
+      @include r(767) {
+        margin-bottom: 10px;
+      }
     }
     .btn {
       max-width: 278px;
@@ -23,6 +37,11 @@ body {
       display: flex;
       justify-content: center;
       margin: auto;
+      @include r(576) {
+        font-size: 18px;
+        font-weight: normal;
+        color: $black;
+      }
     }
   }
 }
