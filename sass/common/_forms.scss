@@ -7,10 +7,24 @@
   max-width: 41%;
   padding: 2.8% calc(8% - 7px) 2.8% 8%;
   max-height: 100%;
+  @include r(1200) {
+    max-width: 417px;
+    padding: 18px 59px 37px 67px;
+  }
+  @include r(1000) {
+    max-width: 100%;
+  }
   .h2-title {
     margin-bottom: 25px;
+    @include r(1200) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
   &__sub-title {
+    @include r(1200) {
+      font-size: 14px;
+    }
     &:not(:last-child) {
       //margin-bottom: 32px;
       margin-bottom: 7.7%;
@@ -44,9 +58,9 @@
     &:not(:last-child) {
       //margin-bottom: 52px;
       margin-bottom: 12.5%;
-      //@media screen and (max-height: 810px)  {
-      //  margin-bottom: 30px;
-      //}
+      @include r(1200) {
+        margin-bottom: 40px;
+      }
     }
     .error {
       position: absolute;
@@ -84,6 +98,17 @@
     width: 100%;
     &:not(:last-child) {
       margin-bottom: 2.9%;
+    }
+    @include r(1200) {
+      margin-bottom: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 18px;
+    }
+    @include r(1000) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-size: 20px;
     }
   }
   &__attention {

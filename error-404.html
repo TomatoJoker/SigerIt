@@ -42,31 +42,33 @@ p.off-js
 -->
 
     <div class="wrapper">
-        <div class="header">
+        <header class="header">
     <div class="container">
         <div class="row">
-            
             <div class="logo">
-            
-                <a data-menuanchor="main" href="/#main" class="js__menu">
+                <a data-menuanchor="main" href="./#main" class="js__menu">
                     <img src="./images/logo.svg" alt="">
                 </a>
             </div>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item" data-menuanchor="about">
-                        <a href="/#about" class="menu__link js__menu">About us</a>
+                        <a href="./#about" class="menu__link js__menu">About us</a>
                         <ul class="menu__sub">
                             <li class="menu__item" data-menuanchor="service">
-                                <a href="/#about/service" class="menu__link js__menu">Service</a>
+                                <a href="./#about/service" class="menu__link js__menu">Service</a>
                             </li>
                             <li class="menu__item" data-menuanchor="review">
-                                <a href="/#about/review" class="menu__link js__menu">Review</a>
+                                <a href="./#about/review" class="menu__link js__menu">Review</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item" data-menuanchor="portfolio"><a href="/#portfolio" class="menu__link js__menu">Portfolio</a></li>
-                    <li class="menu__item" data-menuanchor="contacts"><a href="/#contacts" class="menu__link js__menu">Contacts</a></li>
+                    <li class="menu__item" data-menuanchor="portfolio">
+                        <a href="./#portfolio" class="menu__link js__menu">Portfolio</a>
+                    </li>
+                    <li class="menu__item" data-menuanchor="contacts">
+                        <a href="./#contacts" class="menu__link js__menu">Contacts</a>
+                    </li>
                 </ul>
             </nav>
             <div class="dropdown">
@@ -79,7 +81,7 @@ p.off-js
                     </div>
                     <ul class="dropdown__list">
                         <li class="dropdown__item">
-                            <a href="#" >укр</a>
+                            <a href="#">укр</a>
                         </li>
                         <li class="dropdown__item">
                             <a href="#">рус</a>
@@ -87,9 +89,44 @@ p.off-js
                     </ul>
                 </div>
             </div>
+            <div class="burger js__toggle">
+                <span></span>
+            </div>
+            <div class="header__mobile js__toggle-item">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item" data-menuanchor="about">
+                            <a href="/#about" data-href="about" class="menu__link js__anchor">About us</a>
+                            <ul class="menu__sub">
+                                <li class="menu__item" data-menuanchor="service">
+                                    <a href="/#about/service" data-href="service" class="menu__link js__anchor">Service</a>
+                                </li>
+                                <li class="menu__item" data-menuanchor="review">
+                                    <a href="/#about/review" data-href="review" class="menu__link js__anchor">Review</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a href="/#portfolio" data-href="portfolio" class="menu__link js__anchor">Portfolio</a>
+                        </li>
+                        <li class="menu__item"><a href="/#contacts" data-href="contacts" class="menu__link js__anchor">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__lang">
+                    <span>
+                       <img src="./images/en.svg" alt="en">
+                    </span>
+                    <a href="#">
+                        <img src="./images//ua.svg" alt="ua">
+                    </a>
+                    <a href="#">
+                        <img src="./images/ru.svg" alt="ru">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</header>
         <div class="main">
             <section class="error-404">
                 <div class="container">
@@ -102,7 +139,6 @@ p.off-js
                             </div>
                             <a class="btn" href="/">Home</a>
                         </div>
-                        <div class="error-404__right"></div>
                     </div>
                 </div>
             </section>
@@ -110,7 +146,7 @@ p.off-js
         <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="logo js__main-link">
+            <div class="logo">
                 <a data-menuanchor="main" href="/#main">
                     <img src="./images/logo.svg" alt="">
                 </a>
@@ -140,6 +176,8 @@ p.off-js
             <button class="btn js__btn-cookies">Accept</button>
         </div>
     </div>
+</div>
+<div class="overlay js__toggle-close">
 </div>
     </div>
 

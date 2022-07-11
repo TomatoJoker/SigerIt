@@ -5,6 +5,10 @@
 .main-page {
   .h1-title {
     margin-bottom: 33px;
+    @include r(1000) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
   &__inner {
     background-image: url("../images/door.png");
@@ -13,18 +17,48 @@
     background-repeat: no-repeat;
     background-size: auto calc(100% - 151px);
     //position: relative;
+    @include r(1200) {
+      background-position: 90% calc(100% - 50px);
+      background-size: auto calc(100% - 200px) !important;
+    }
+    @include r(1000) {
+      background-position: 25% 140px;
+      background-size: auto 60% !important;
+      align-items: flex-end;
+    }
   }
   &__right {
     max-width: 559px;
+    @include r(1200) {
+      max-width: 458px;
+    }
+    @include r(1000) {
+      max-width: 100%;
+    }
   }
   &__description {
     margin-bottom: 45px;
+    @include r(1000) {
+      text-align: center;
+    }
     p {
       @include css-lock(18, 24, 1200, 1900);
       line-height: 132%;
       &:not(:last-child) {
         margin-bottom: 10px;
       }
+    }
+  }
+  .btn {
+    @include r(1000) {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      margin-bottom: 61px;
+      display: block;
+      line-height: 140%;
     }
   }
 }
@@ -35,14 +69,42 @@
   background-position: 93% bottom;
   background-repeat: no-repeat;
   @include anim;
+  @include r(1200) {
+    background-size: auto 90%;
+    background-position: calc(100% + 200px) center;
+  }
+  @include r(1000) {
+    background-position: 75% 0px;
+    background-size: auto 80%;
+  }
+  .inner {
+    display: flex;
+    @include r(1000) {
+      align-items: flex-end;
+    }
+  }
   &__left {
     max-width: 700px;
     width: 100%;
+    @include r(1200) {
+      max-width: 363px;
+    }
+    @include r(1000) {
+      margin-bottom: 43px;
+      max-width: 100%;
+      border-radius: 23px;
+      background: $black;
+      padding: 25px 51px 50px;
+    }
   }
+  h2,
   .h1-title {
-    margin-bottom: 86px;
+    margin-bottom: 33px;
     @include rmin(1201) {
       @include css-lock(36, 64, 1200, 1920)
+    }
+    @include r(1000) {
+      font-size: 36px;
     }
   }
   .row {
@@ -52,6 +114,9 @@
     justify-content: flex-start;
     &:not(:last-child) {
       margin-bottom: 60px;
+      @include r(1200) {
+        margin-bottom: 27px;
+      }
     }
     span {
       @include css-lock(24, 48, 1200, 1920);
@@ -74,6 +139,16 @@
     height: 100%;
     align-items: center;
     @include gap(column, 20px);
+    @include r(1200) {
+      @include gap(column, 80px);
+    }
+    @include r(1000) {
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 70px;
+      flex-wrap: nowrap;
+    }
   }
   .h2-title {
     margin-bottom: 15px;
@@ -83,9 +158,29 @@
     flex-direction: column;
     max-width: 704px;
     flex: 1;
+    @include r(1000) {
+      padding: 30px 65px !important;
+    }
+    .h2-title {
+      @include r(1200) {
+        font-size: 24px;
+      }
+    }
+    @include r(1000) {
+      flex: 0;
+    }
   }
   &__description {
     flex: 1;
+    @include r(1000) {
+      flex: auto;
+      max-height: 230px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 11;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
     &_big {
       p {
         @include rmin(1200) {
@@ -98,6 +193,9 @@
       line-height: 125%;
       &:not(:last-child) {
         margin-bottom: 20px;
+        @include r(1000) {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -105,6 +203,11 @@
     display: flex;
     align-items: center;
     @include gap(column, 6%);
+    @include r(1000) {
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
     p {
       line-height: 125%;
     }
@@ -118,6 +221,17 @@
   &__services {
     flex: 1;
     max-width: 825px;
+    .h2-title {
+      margin-left: 90px;
+      margin-right: 90px;
+      margin-bottom: 30px;
+    }
+    @include r(1000) {
+      max-width: 100%;
+      width: 100%;
+      padding-top: 50px 12px 37px;
+      flex: 0;
+    }
   }
   &__service {
     max-width: 329px;
@@ -125,6 +239,9 @@
   &__img {
     width: 234px;
     height: auto;
+    @include r(1200) {
+      width: 150px;
+    }
   }
 }
 
@@ -142,6 +259,14 @@
   &__slider {
     max-width: 1146px;
     padding: 98px 148px 65px;
+    @include r(1200) {
+      max-width: 794px;
+      padding: 68px 90px 20px;
+    }
+    @include r(1000) {
+      max-width: 100%;
+      padding: 68px 71px 45px 85px;
+    }
   }
   &__head {
     display: flex;
@@ -152,9 +277,20 @@
     img {
       border-radius: 5px;
     }
+    @include r(1000) {
+      padding-bottom: 35px;
+      margin-bottom: 35px;
+      @include gap(column, 12px);
+    }
   }
   &__pro {
     margin-top: 21px;
+    .semibold {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
     * {
       &:not(:last-child) {
         margin-bottom: 2px;
@@ -162,9 +298,9 @@
     }
   }
   &__bottom {
-    max-height: 164px;
+    //max-height: 164px;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     p {
       &:not(:last-child) {
         margin-bottom: 10px;
@@ -200,7 +336,9 @@
     // animation version 1
     //transition: .6s cubic-bezier(.39,.58,.57,1);
     // animation version 2
-    transition: 0.5s cubic-bezier(.19,1,.22,1);
+    @include rmin(1201) {
+      transition: 0.5s cubic-bezier(.19,1,.22,1);
+    }
     overflow: visible !important;
     &:after {
       content: '';
@@ -228,6 +366,9 @@
       &:after {
         transform: scale(1.45);
         transform-origin: center;
+        @include r(1000) {
+          transform: scale(1);
+        }
       }
       &:after {
         opacity: 0;
@@ -240,6 +381,9 @@
       &:after {
         transform: scale(1.174);
         transform-origin: center left;
+        @include r(1000) {
+          transform: scale(1);
+        }
       }
     }
     &.swiper-slide-next {
@@ -248,6 +392,9 @@
       &:after {
         transform: scale(1.174);
         transform-origin: center right;
+        @include r(1000) {
+          transform: scale(1);
+        }
       }
     }
     &.animate {
@@ -259,6 +406,10 @@
         // animation version 2
         width: calc(100% + 5px);
         height: calc(100% + 5px);
+        @include r(1200) {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
@@ -270,6 +421,14 @@
   background-size: 64%;
   background-repeat: no-repeat;
   background-position: 2.5% 82%;
+  @include r(1200) {
+    background-size: 62%;
+    background-repeat: no-repeat;
+    background-position: 0% center;
+  }
+  @include r(1000) {
+    background: none;
+  }
   &__inner {
     justify-content: flex-end;
   }
@@ -284,11 +443,13 @@
     transform: translateX(-50%);
     font-size: 40px;
     opacity: 1;
-    animation-name: down;
-    animation-duration: 1.2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    @include anim;
+    @include rmin(1201) {
+      animation-name: down;
+      animation-duration: 1.2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      @include anim;
+    }
     &.hide {
       opacity: 0;
     }
@@ -322,6 +483,9 @@
   bottom: 20px;
   left: 40px;
   max-width: 850px;
+  @include r(1000) {
+    display: none;
+  }
   .icon {
     fill: $primary;
     font-size: 51px;

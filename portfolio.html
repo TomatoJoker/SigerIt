@@ -42,31 +42,33 @@ p.off-js
 -->
 
     <div class="wrapper">
-        <div class="header">
+        <header class="header">
     <div class="container">
         <div class="row">
-            
             <div class="logo">
-            
-                <a data-menuanchor="main" href="/#main" class="js__menu">
+                <a data-menuanchor="main" href="./#main" class="js__menu">
                     <img src="./images/logo.svg" alt="">
                 </a>
             </div>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item" data-menuanchor="about">
-                        <a href="/#about" class="menu__link js__menu">About us</a>
+                        <a href="./#about" class="menu__link js__menu">About us</a>
                         <ul class="menu__sub">
                             <li class="menu__item" data-menuanchor="service">
-                                <a href="/#about/service" class="menu__link js__menu">Service</a>
+                                <a href="./#about/service" class="menu__link js__menu">Service</a>
                             </li>
                             <li class="menu__item" data-menuanchor="review">
-                                <a href="/#about/review" class="menu__link js__menu">Review</a>
+                                <a href="./#about/review" class="menu__link js__menu">Review</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item" data-menuanchor="portfolio"><a href="/#portfolio" class="menu__link js__menu">Portfolio</a></li>
-                    <li class="menu__item" data-menuanchor="contacts"><a href="/#contacts" class="menu__link js__menu">Contacts</a></li>
+                    <li class="menu__item" data-menuanchor="portfolio">
+                        <a href="./#portfolio" class="menu__link js__menu">Portfolio</a>
+                    </li>
+                    <li class="menu__item" data-menuanchor="contacts">
+                        <a href="./#contacts" class="menu__link js__menu">Contacts</a>
+                    </li>
                 </ul>
             </nav>
             <div class="dropdown">
@@ -79,7 +81,7 @@ p.off-js
                     </div>
                     <ul class="dropdown__list">
                         <li class="dropdown__item">
-                            <a href="#" >укр</a>
+                            <a href="#">укр</a>
                         </li>
                         <li class="dropdown__item">
                             <a href="#">рус</a>
@@ -87,9 +89,44 @@ p.off-js
                     </ul>
                 </div>
             </div>
+            <div class="burger js__toggle">
+                <span></span>
+            </div>
+            <div class="header__mobile js__toggle-item">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item" data-menuanchor="about">
+                            <a href="/#about" data-href="about" class="menu__link js__anchor">About us</a>
+                            <ul class="menu__sub">
+                                <li class="menu__item" data-menuanchor="service">
+                                    <a href="/#about/service" data-href="service" class="menu__link js__anchor">Service</a>
+                                </li>
+                                <li class="menu__item" data-menuanchor="review">
+                                    <a href="/#about/review" data-href="review" class="menu__link js__anchor">Review</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a href="/#portfolio" data-href="portfolio" class="menu__link js__anchor">Portfolio</a>
+                        </li>
+                        <li class="menu__item"><a href="/#contacts" data-href="contacts" class="menu__link js__anchor">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__lang">
+                    <span>
+                       <img src="./images/en.svg" alt="en">
+                    </span>
+                    <a href="#">
+                        <img src="./images//ua.svg" alt="ua">
+                    </a>
+                    <a href="#">
+                        <img src="./images/ru.svg" alt="ru">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</header>
         <main class="main">
             <section class="project">
                 <div class="container">
@@ -158,7 +195,7 @@ p.off-js
         <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="logo js__main-link">
+            <div class="logo">
                 <a data-menuanchor="main" href="/#main">
                     <img src="./images/logo.svg" alt="">
                 </a>
@@ -189,8 +226,10 @@ p.off-js
         </div>
     </div>
 </div>
+<div class="overlay js__toggle-close">
+</div>
         <div class="modal dark-block" id="modal-card">
-    <img src="/images/ppri.jpg" width="491" height="295" alt="">
+    <img src="./images/ppri.jpg" width="491" height="295" alt="">
     <h3 class="h3-title">PPRI - Paranormal Phenomena Research & Investigation</h3>
     <div class="modal__text">
         <p>The Canadian Association of Parapsychological Research & Investigation operating as Paranormal Phenomena

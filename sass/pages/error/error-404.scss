@@ -1,12 +1,24 @@
 .error-404 {
   &__left {
     max-width: 684px;
+    @include r(1200) {
+      max-width: 363px;
+    }
+    @include r(1000) {
+      max-width: 100%;
+    }
     .h1-title {
       margin-bottom: 25px;
+      @include r(1000) {
+        text-align: center;
+      }
     }
   }
   &__text {
     margin-bottom: 40px;
+    @include r(1000) {
+      text-align: center;
+    }
   }
   &__right {
     position: absolute;
@@ -17,8 +29,23 @@
     position: relative;
     background-image: url("../images/404.png");
     background-size: contain;
-    background-position: top right;
+    background-position: center right;
     background-repeat: no-repeat;
-    background-size: auto 91%;
+    @include r(1200) {
+      background-size: auto 76%;
+    }
+    @include r(1000) {
+      align-items: flex-end;
+      background-size: 100% auto;
+      background-position: 100% 50px;
+    }
+  }
+  .btn {
+    @include r(1000) {
+      width: 100%;
+      text-align: center;
+      padding-top: 31px;
+      padding-bottom: 31px;
+    }
   }
 }

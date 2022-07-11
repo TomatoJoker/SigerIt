@@ -1,17 +1,26 @@
 .footer {
   position: relative;
+  background: $black;
+  padding: 10px 0px;
   &__main {
     position: absolute;
     width: 100%;
     bottom: 0px;
+    @include r(576) {
+      position: relative;
+    }
   }
-  background: $black;
-  padding: 10px 0px;
-
   .logo {
     max-width: 175px;
     @include r(1200) {
       max-width: 150px;
+    }
+  }
+  .row {
+    @include r(576) {
+      flex-direction: column;
+      align-items: center;
+      @include gap(row, 15px);
     }
   }
   &__right {
@@ -22,6 +31,11 @@
     }
     @include r(1000) {
       @include gap(column, 30px);
+    }
+    @include r(576) {
+      flex-direction: column;
+      align-items: center;
+      @include gap(row, 10px);
     }
   }
   &__item {

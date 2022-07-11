@@ -11,7 +11,10 @@ $(function () {
 
   var lengthFullPage = false;
   fullPage($('.js__page-scroll'));
-  fullPageInit();
+
+  if ($('.js__page-scroll').length > 0) {
+    fullPageInit();
+  }
 
   function fullPage(item) {
     if (lengthFullPage === false) {
@@ -27,7 +30,7 @@ $(function () {
         responsiveWidth: false,
         menu: '.menu__list',
         controlArrows: false,
-        scrollBar: true,
+        // scrollBar: true,
         normalScrollElements: '.normal-scrolling',
         fitToSection: false,
         onLeave: function onLeave(index, nextIndex) {
@@ -49,7 +52,7 @@ $(function () {
 
 
   function fullPageInit() {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth > 767) {
       fullPage($('.js__page-scroll'));
     } else {
       $.fn.fullpage.destroy('all');
@@ -134,15 +137,22 @@ $(function () {
 
   if (swiperLenght > 6) {
     var sliderPortfolio = new Swiper('.js__carousel', {
-      slidesPerView: 3,
       initialSlide: slide.toFixed() - 1,
       centeredSlides: true,
       roundLengths: true,
       slideToClickedSlide: true,
-      // autoplay: {
-      //     enabled: true,
-      //     delay: 3000
-      // },
+      autoplay: {
+        enabled: true,
+        delay: 3000
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+        1000: {
+          slidesPerView: 3
+        }
+      },
       pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -197,7 +207,7 @@ $(function () {
   }).on("input", function () {
     this.style.height = "auto";
     this.style.height = this.scrollHeight + "px";
-  }); //
+  }); // resize textarea on input
 
   triggerNormalScrolling($('.js__height'));
 
@@ -228,7 +238,8 @@ $(function () {
     }
   }
 
-  ;
+  ; // hide icon on scroll for footer
+
   hideIcon();
   $(window).scroll(function () {
     hideIcon();
@@ -249,5 +260,41 @@ $(function () {
     } // localStorage.clear();
     // console.log(localStorage.length);
 
-  }
+  } // cookies localStorage
+
+
+  $('.js__toggle').on('click', function () {
+    $(this).toggleClass('active');
+    $('.js__toggle-item').toggleClass('open');
+    $('.js__toggle-close').toggleClass('active');
+  }); // mobile menu toggle
+
+  $('.js__toggle-close').on('click', function () {
+    $('.js__toggle').removeClass('active');
+    $('.js__toggle-item').removeClass('open');
+    $(this).removeClass('active');
+  }); // overlay for mobile menu
+
+  $('.js__anchor').click(function () {
+    var href = $(this).attr('data-href'),
+        scrollTo = $('[data-anchor="' + href + '"]').offset().top;
+    $('.js__toggle').removeClass('active');
+    $('.js__toggle-item').removeClass('open');
+    $('.js__toggle-close').removeClass('active');
+    $('body, html').animate({
+      scrollTop: scrollTo - 60
+    }, 1000);
+    return false;
+  }); // anchor for mobile
+
+  dynamicVh();
+  $(document).scroll(function () {
+    dynamicVh();
+  });
+
+  function dynamicVh() {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  } // native js for calc toolbar mobile browser
+
 });
