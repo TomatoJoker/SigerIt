@@ -33,6 +33,7 @@ $(function () {
         // scrollBar: true,
         normalScrollElements: '.normal-scrolling',
         fitToSection: false,
+        fixedElements: '.message',
         onLeave: function onLeave(index, nextIndex) {
           if (nextIndex == 1) {
             $('.header').removeClass('active');
