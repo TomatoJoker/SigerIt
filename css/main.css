@@ -3720,7 +3720,9 @@ body .modal .btn {
 .message .icon {
   fill: #0B78FF;
   font-size: 51px;
-  min-width: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 .message img {
@@ -3730,6 +3732,9 @@ body .modal .btn {
 
 .message p {
   font-size: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 .message p span {

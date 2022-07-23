@@ -637,7 +637,7 @@
   .icon {
     fill: $primary;
     font-size: 51px;
-    min-width: 50px;
+    flex: auto;
   }
   img {
     width: 120px;
@@ -645,6 +645,7 @@
   }
   p {
     font-size: 16px;
+    flex: auto;
     span {
       margin-top: 5px;
       display: block;
