@@ -3587,6 +3587,7 @@ body .modal .btn {
 }
 
 .contact .icon__mouse {
+  cursor: pointer;
   fill: white;
   position: absolute;
   bottom: 20px;
