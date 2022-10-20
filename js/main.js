@@ -165,19 +165,34 @@ $(function () {
       slidesPerView: 3,
       centeredSlides: true,
       roundLengths: true,
+      slideToClickedSlide: true,
+      autoplay: {
+        enabled: true,
+        delay: 3000
+      },
       navigation: {
         nextEl: '.js__nav-next',
         prevEl: '.js__nav-prev'
       },
       on: {
         init: function init() {
-          console.log('init');
-          heightForNav();
+          console.log('init'); // heightForNav();
         }
       }
     });
   } // slider for portfolio
+  // $('a').on('click', function () {
+  //     return false;
+  // })
 
+
+  $('[data-fancybox]').fancybox({
+    smallBtn: false,
+    hideScrollbar: true,
+    toolbar: false,
+    animationDuration: 300,
+    animationEffect: 'slide-in-out'
+  }); // fancybox option (modal lib)
 
   sliderPortfolio.on("slideChangeTransitionStart", function () {
     // let active = sliderPortfolio.activeIndex;
@@ -195,14 +210,7 @@ $(function () {
   //     },
   // });
 
-  $('[data-fancybox]').fancybox({
-    smallBtn: false,
-    hideScrollbar: true,
-    toolbar: false,
-    animationDuration: 300,
-    animationEffect: 'slide-in-out'
-  }); // fancybox option (modal lib)
-
+  var instance = $.fancybox.getInstance();
   $(".js__textarea textarea").each(function () {
     this.setAttribute("style", "height:" + this.scrollHeight + "px;overflow-y:hidden;");
   }).on("input", function () {

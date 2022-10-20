@@ -43,6 +43,11 @@ body {
         color: $black;
       }
     }
+    &__feedback {
+      p {
+        line-height: 22px;
+      }
+    }
   }
 }
 
